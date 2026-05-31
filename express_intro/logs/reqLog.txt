@@ -6,3 +6,15 @@
 20260531	19:49:47	c453819c-2b1d-4b25-9e88-1446bf03e5a5	GET	https://www.google.com	/
 20260531	20:01:27	26857985-1335-434b-bb74-d5e99d82ff86	GET	https://www.google.com	/
 20260531	20:01:44	e0e5f8b1-d022-4b82-bfe6-028d24bfc675	GET	https://www.google.com	/
+20260531	21:38:14	57ad379e-361f-4aa0-9407-abc508f9a911	GET	undefined	/
+20260531	21:38:14	9e4095ba-2087-4fdf-8e50-a4d6220f17eb	GET	undefined	/favicon.ico
+20260531	21:39:01	f7fbc0aa-4676-4013-be37-f9623bd36e92	GET	undefined	/
+20260531	21:39:01	22b851b5-5250-4cdd-882f-3915ed9844a9	GET	undefined	/css/style.css
+20260531	21:39:01	ff0e5ca0-7174-4945-afd8-03eb0202b614	GET	undefined	/favicon.ico
+20260531	21:43:18	d226383a-4cd4-4c23-a48d-9a2219d07299	GET	undefined	/
+20260531	21:43:18	9474d26d-41fa-4ca9-b5a0-e62241d6b6c4	GET	undefined	/css/style.css
+20260531	21:43:27	28b26282-2bb1-4a5f-9a60-f6d71927abfa	GET	undefined	/
+20260531	21:56:44	4fd579b6-f0c7-4f9e-a97e-e9b88673d542	GET	undefined	/matthew
+20260531	21:56:44	551bfa2f-51d6-41a1-9cff-869443bbae57	GET	undefined	/css/style.css
+20260531	22:00:07	b27412ec-15ac-48cf-a588-d3f3b4864f72	GET	undefined	/matthew
+20260531	22:00:07	847c4fc0-ea6f-4446-a4cc-1c9cd5316919	GET	undefined	/css/style.css
