@@ -1,0 +1,8 @@
+20260531	19:21:23	1fa7a5cd-89fd-42ce-827a-34a16170eb62	GET	undefined	/
+20260531	19:21:23	c7fa61c8-7e7f-4c2e-9bdf-a62e9fe6358a	GET	undefined	/css/style.css
+20260531	19:21:26	a56a072e-ce38-4c27-aca0-294ed181305e	GET	undefined	/
+20260531	19:21:26	c03dac9c-7db2-42f9-aeae-1cce5e40a10a	GET	undefined	/css/style.css
+20260531	19:42:51	9f458ba5-3201-43d5-925b-7ec554fe1158	GET	https://www.google.com	/
+20260531	19:49:47	c453819c-2b1d-4b25-9e88-1446bf03e5a5	GET	https://www.google.com	/
+20260531	20:01:27	26857985-1335-434b-bb74-d5e99d82ff86	GET	https://www.google.com	/
+20260531	20:01:44	e0e5f8b1-d022-4b82-bfe6-028d24bfc675	GET	https://www.google.com	/

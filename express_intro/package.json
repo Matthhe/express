@@ -10,11 +10,12 @@
   "author": "Dave Gray",
   "license": "ISC",
   "dependencies": {
-    "date-fns": "^2.23.0",
-    "express": "^4.17.1",
-    "uuid": "^8.3.2"
+    "cors": "^2.8.6",
+    "date-fns": "^4.4.0",
+    "express": "^5.2.1",
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^3.1.14"
   }
 }
