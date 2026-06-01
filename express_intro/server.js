@@ -30,8 +30,14 @@ app.use(cors(corsOptions))
 
 //app.use(express.json());
 
-app.use(express.static(path.join(__dirname, '/public')))
+app.use('/', express.static(path.join(__dirname, '/public')))
+app.use('/subdir', express.static(path.join(__dirname, '/public')))
+app.use('/new', express.static(path.join(__dirname, '/public')))
 
+//* routes
+app.use('/new', require('./routes/root'))
+app.use('/subdir', require('./routes/subdir'))
+app.use('/employees', require('./routes/api/employees'))
 
 //* app.get('^/$|/index.html') => will gave us index.html file
 //* app.get('^/$|/index(.html)?') => will gave us index.html file, BUT .html will be optionan 
@@ -47,31 +53,6 @@ app.get(/\/new-page(\.html)?/, (req, res) => {
 app.get(/\/old-page(\.html)?/, (req, res) => {
     res.redirect(302, '/new-page.html'); 
 });
-
-//* Route handlers
-app.get(/\/hello(\.html)?/, (req, res, next) => {
-    console.log('attemted to load hello.html')
-    next() //* moves on next handler
-}, (req, res) => {
-    res.send('Hello World');
-})
-
-const one = (req, res, next) => {
-    console.log('one')
-    next()
-}
-
-const two = (req, res, next) => {
-    console.log('two')
-    next()
-}
-
-const three = (req, res) => {
-    console.log('three')
-    res.send('Finished!!!')
-}
-
-app.get(/\/chain(\.html)?/, [one, two, three])
 
 app.all(/.*/, (req, res) => { //* 'all' for all requests
     res.status(404)
