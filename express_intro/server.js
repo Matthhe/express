@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const cors = require('cors')
+const cordOptions = require('./config/corsOption')
 const {logger} = require('./middleware/logEvents')
 const errorHandler = require('./middleware/errorHandler')
 const { error } = require('console')
@@ -12,31 +13,15 @@ const PORT = process.env.PORT || 3500;
 //* custom middleware logger
 app.use(logger)
 
-//* whitelist is a list that shows, what websites can make request for our backend
-const whitelist = ['https://www.google.com', 'http://127.0.0.1:5500', 'http://localhost:3500']
-const corsOptions = {
-    origin: (origin, callback) => {
-        if(whitelist.indexOf(origin) !== -1 || !origin){
-            callback(null, true) //* enable CORS
-        } else{
-            callback(new Error("Not allowed by CORS")) //* Disable cors
-        }
-    },
-    optionsSuccessStatus: 200
-}
-app.use(cors(corsOptions))
 
 //app.use(express.urlencoded({extended:false}))
 
 //app.use(express.json());
 
 app.use('/', express.static(path.join(__dirname, '/public')))
-app.use('/subdir', express.static(path.join(__dirname, '/public')))
-app.use('/new', express.static(path.join(__dirname, '/public')))
 
 //* routes
-app.use('/new', require('./routes/root'))
-app.use('/subdir', require('./routes/subdir'))
+app.use('/', require('./routes/root'))
 app.use('/employees', require('./routes/api/employees'))
 
 //* app.get('^/$|/index.html') => will gave us index.html file

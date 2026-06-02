@@ -6,12 +6,4 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
 });
 
-router.get(/\/new-page(\.html)?/, (req, res) => { 
-    res.sendFile(path.join(__dirname, '..', 'views', 'new-page.html')); //* the second route
-});
-
-router.get(/\/old-page(\.html)?/, (req, res) => {
-    res.redirect(302, '/new-page.html'); 
-});
-
 module.exports = router;
