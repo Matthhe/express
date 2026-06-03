@@ -6,6 +6,7 @@ const corsOptions = require('./config/corsOption')
 const {logger} = require('./middleware/logEvents')
 const errorHandler = require('./middleware/errorHandler')
 const verifyJWT = require('./middleware/verifyJWT')
+const cookieParser = require('cookie-parser')
 const { error } = require('console')
 const PORT = process.env.PORT || 3500;
 
@@ -15,9 +16,12 @@ const PORT = process.env.PORT || 3500;
 app.use(logger)
 
 app.use(cors(corsOptions))
-//app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:false}))
 
 app.use(express.json()); //! need to read req.body
+
+//* middleware for cookies
+app.use(cookieParser());
 
 app.use('/', express.static(path.join(__dirname, '/public')))
 
@@ -25,6 +29,7 @@ app.use('/', express.static(path.join(__dirname, '/public')))
 app.use('/', require('./routes/root'))
 app.use('/register', require('./routes/api/register'))
 app.use('/auth', require('./routes/api/auth'))
+app.use('/refresh', require('./routes/api/refresh'))
 
 app.use(verifyJWT) //* will work for /employees only
 app.use('/employees', require('./routes/api/employees'))
